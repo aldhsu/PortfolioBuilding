@@ -72,6 +72,20 @@
   }
 }
 
+/*==========  LEARNING  ==========*/
+.highlight-module--text {
+  color: #ffffff;
+
+  &::after {
+    background-color: $colorText;
+  }
+
+  a {
+    color: #ffffff;
+    text-decoration: underline;
+  }
+}
+
 
 /*==========  REMEMBER  ==========*/
 .highlight-module--remember {

@@ -12,6 +12,7 @@
  * Remove if you prefer to use a CSS library, like Bootstrap
  */
 @import 'components/components';
+$backgroundColor: #000000;
 
 html,
 body {
@@ -40,7 +41,7 @@ body.open {
   position: fixed;
   top: 0;
   left: 0;
-  background-color: #4285f4;
+  background-color: $backgroundColor;
   overflow: hidden;
   z-index: 1;
 }
@@ -153,7 +154,7 @@ ol {
   bottom: 0;
   width: 250px;
   height: 100%;
-  background-color: #3367D6;
+  background-color: $backgroundColor;
   color: #fefefe;
   -webkit-transform: translate(-250px, 0);
           transform: translate(-250px, 0);
@@ -181,7 +182,7 @@ main {
 
 .navdrawer-container h4 {
   background-color: white;
-  color: #3367D6;
+  color: #000;
 }
 
 .navdrawer-container ul {
@@ -248,7 +249,7 @@ main {
     max-width: 864px;
     padding: 0 16px;
     box-sizing: border-box;
-    background-color: #4285f4;
+    background-color: $backgroundColor;
   }
 
   .app-bar .logo {
@@ -315,6 +316,20 @@ main {
   body {
     overflow-y: scroll;
   }
+}
+
+.social-links {
+  img {
+    height: 40px;
+    width: 40px;
+  }
+  a {
+    display: inline-block;
+    margin-left: 10px;
+    margin-top: 5px;
+    text-align: center;
+  }
+
 }
 
 @font-face {
