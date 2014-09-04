@@ -20,7 +20,7 @@
     <!-- Tile icon for Win8 (144x144 + tile color) -->
     <meta name="msapplication-TileImage" content="images/touch/ms-touch-icon-144x144-precomposed.png">
     <meta name="msapplication-TileColor" content="#3372DF">
-
+    <script src="//cdnjs.cloudflare.com/ajax/libs/underscore.js/1.6.0/underscore-min.js" type="text/javascript" charset="utf-8" async defer></script>
     <!-- SEO: If your mobile URL is different from the desktop URL, add a canonical link to the desktop page https://developers.google.com/webmasters/smartphone-sites/feature-phones -->
     <!--
     <link rel="canonical" href="http://www.example.com/">
@@ -41,61 +41,434 @@
     <nav class="navdrawer-container promote-layer">
       <h4>Navigation</h4>
       <ul>
-        <li><a href="#hello">About Me</a></li>
-        <li><a href="#get-started">Projects</a></li>
+        <li><a href="#aboutme">About Me</a></li>
+        <li><a href="#projects">Projects</a></li>
         <li><a href="styleguide.html">Contact</a></li>
       </ul>
     </nav>
 
-    <main>
+    <!-- Highlights Start -->
+    <section class="about_me">
 
-      <section class="styleguide__highlights">
-        <div class="code-sample">
-          <div class="highlight-module highlight-module--right highlight-module--remember">
-            <div class="highlight-module__container">
-              <div class="highlight-module__content g-wide--push-1">
-                <p class="highlight-module__title">About Me</p>
-                <p class="highlight-module__text"> Hi I'm Allen. I'm a web developer and aspiring Macgyver. I love exploring new technologies and building challenging projects. Currently available for work in the Sydney, Australia. Let's chat!</p>
-                <div class="social-links">
-                  <a href="http://au.linkedin.com/in/allendhsu" target="_blank">
-                    <img src="images/linkedin.svg" alt="Linkedin">
-                    <div>linkedin</div>
-                  </a>
-                  <a href="https://github.com/aldhsu" target="_blank">
-                    <img src="images/github.svg" alt="Linkedin">
-                    <div>github</div>
-                  </a>
-                  <a href="http://pterofaur.tumblr.com" target="_blank">
-                    <img src="images/tumblr.svg" alt="Linkedin">
-                    <div>my blog</div>
-                  </a>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
       <div class="code-sample">
-          <div class="highlight-module highlight-module--left highlight-module--learning">
-            <div class="highlight-module__container">
-              <div class="highlight-module__content g-medium--last">
-                <p class="highlight-module__title">Things I'm About</p>
-                <p class="highlight-module__text">
-                  <ul>
-                    <li><strong>Real Time Interactivity</strong> - Web apps where users can interact with each other <strong>live</strong>
-                    </li>
-                    <li><strong>Learning</strong> - I'm currently learning Node.js and Angularjs</li>
-                    <li><strong>Digital Freedom</strong> - Member of EFA and looking to contribute to EFF privacy software endeavours</li>
-                    <li></li>
-                  </ul>
-                </p>
+        <div class="highlight-module  highlight-module--right   highlight-module--remember">
+          <div class="highlight-module__container  icon-cog ">
+            <div class="highlight-module__content   g-wide--push-1 g-wide--pull-1  g-medium--pull-1   ">
+              <a name="aboutme"></a>
+              <p class="highlight-module__title">About Me</p>
+              <p class="highlight-module__text"> Hi I'm Allen. I'm a web developer and aspiring Macgyver. I love exploring new technologies and building challenging projects. Currently available for work in Sydney, Australia. Let's chat!</p>
+              <div class="social-links">
+                <a href="http://au.linkedin.com/in/allendhsu" target="_blank">
+                  <img src="images/linkedin.svg" alt="Linkedin">
+                  <div>linkedin</div>
+                </a>
+                <a href="https://github.com/aldhsu" target="_blank">
+                  <img src="images/github.svg" alt="Linkedin">
+                  <div>github</div>
+                </a>
+                <a href="http://pterofaur.tumblr.com" target="_blank">
+                  <img src="images/tumblr.svg" alt="Linkedin">
+                  <div>my blog</div>
+                </a>
               </div>
             </div>
           </div>
         </div>
       </div>
-    </main>
 
+      <div class="code-sample">
+        <div class="highlight-module  highlight-module--left   highlight-module--learning  ">
+          <div class="highlight-module__container  icon-tick ">
+            <div class="highlight-module__content   g-wide--push-1 g-wide--pull-1  g-medium--push-1   ">
+              <p class="highlight-module__title"> Things I'm About</p>
+                <ul>
+                  <li><strong>Real Time Interactivity</strong> - Web apps where users can interact with each other <strong>live</strong> and allows for emergent content
+                  </li>
+                  <li><strong>Problem Solving</strong> - I love solving difficult problems and analytically optimising solutions</li>
+                  <li><strong>Learning</strong> - Learning new frameworks(currently Nodejs) and programming paradigms</li>
+                  <li><strong>Digital Freedom</strong> - Member of EFA and looking to contribute to EFF privacy software endeavours</li>
+                </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <div class="code-sample">
+      <section class="projects">
+        <div class="guides-section">
+          <header class="container">
+            <a name="projects"></a>
+            <h2 class="xxlarge">Projects</h2>
+          </header>
+          <ul class="guides-list container-medium">
+            <li class="guides-list__item g--half theme--multi-device-layouts ">
+            <div class="primary-content">
+              <h3 class="xlarge"><a href="#ignore-click" class="themed">Froodle</a></h3>
+              <p>Pictionary with friends and strangers! Suggest new prompts and receive points for your drawing ability!</p>
+              <a href="https://froodle.herokuapp.com"><img src="/images/froodle/landing.jpg"></a>
+              <p>Built using Rails backend, Cloudinary storage of pictures, jQuery and Google Plus API</p>
+            </div>
+            <div class="secondary-content">
+              <span class="icon-circle themed--background"><i class="icon icon-lessons"></i></span>
+              <ol class="list-links list-links--secondary">
+                <li><a href="http://pterofaur.tumblr.com/post/90006681011/ga-day-23">Blog Post on Project Proposal</a></li>
+                <li><a href="http://pterofaur.tumblr.com/post/90346931281/ga-day-24-25-26">Blog Post on Build Process</a></li>
+              </ol>
+            </div>
+            </li>
+            <li class="guides-list__item g--half theme--introduction-to-media g--last">
+            <div class="primary-content">
+              <h3 class="xlarge"><a href="#ignore-click" class="themed">ThreeDee</a></h3>
+              <p>3D music visualiser in the browser</p>
+              <a href="https://froodle.herokuapp.com"><img src="/images/froodle/landing.jpg"></a>
+              <p>Built using Rails backend, three.js, jQuery, Web Audio API and SoundCloud API </p>
+            </div>
+            <div class="secondary-content">
+              <span class="icon-circle themed--background"><i class="icon icon-lessons"></i></span>
+              <ol class="list-links list-links--secondary">
+
+              </ol>
+            </div>
+            </li>
+            <li class="guides-list__item g--half theme--user-input ">
+            <div class="primary-content">
+              <h3 class="xlarge"><a href="#ignore-click" title="Go to Forms and User Input" class="themed">Forms and User Input</a></h3>
+              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptate, adipisci, aspernatur. Velit, consequatur, temporibus, neque minus obcaecati dolor officia architecto voluptatem et pariatur quo vitae saepe laborum ratione eum. Soluta.</p>
+            </div>
+            <div class="secondary-content">
+              <span class="icon-circle themed--background"><i class="icon icon-lessons"></i></span>
+              <ol class="list-links list-links--secondary">
+                <li><a href="#ignore-click" title="Read the lesson Create Amazing Forms">Create Amazing Forms</a></li>
+                <li><a href="#ignore-click" title="Read the lesson Add Touch to Your Site">Add Touch to Your Site</a></li>
+              </ol>
+            </div>
+            </li>
+            <li class="guides-list__item g--half theme--performance g--last">
+            <div class="primary-content">
+              <h3 class="xlarge"><a href="#ignore-click" title="Go to Optimizing Performance" class="themed">Optimizing Performance</a></h3>
+              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. A, ratione officia officiis natus illum quos cumque quis! Optio, dolore, eligendi ea culpa quod esse atque architecto reprehenderit at tempora itaque!</p>
+            </div>
+            <div class="secondary-content">
+              <span class="icon-circle themed--background"><i class="icon icon-lessons"></i></span>
+              <ol class="list-links list-links--secondary">
+                <li><a href="#ignore-click" title="Read the lesson Critical Rendering Path">Critical Rendering Path</a></li>
+                <li><a href="#ignore-click" title="Read the lesson Optimizing Content Efficiency">Optimizing Content Efficiency</a></li>
+              </ol>
+            </div>
+            </li>
+          </ul>
+        </div>
+      </section>
+    </div>
+
+    <div class="container">
+      <a name="page-header"></a>
+      <h2 class="subsection-title"><strong class="subsection-number">#14</strong> Page header</h2>
+    </div>
+
+    <div class="code-sample">
+      <section class="styleguide__page-header">
+        <div class="page-header">
+          <div class="container">
+            <nav class="breadcrumbs">
+              <p> / <a href="#ignore-click" class="breadcrumbs__link"> The Essentials</a></p>
+            </nav>
+            <h3 class="xxlarge text-divider">Multi-screen layouts</h3>
+            <p class="page-header__excerpt g-wide--push-1 g-wide--pull-1">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Natus, optio, ad, voluptates repudiandae at excepturi error delectus explicabo nulla eum provident quibusdam ipsum sapiente culpa sequi quia unde fuga id.</p>
+          </div>
+        </div>
+      </section>
+    </div>
+
+    <div class="container">
+      <a name="quote"></a>
+      <h2 class="subsection-title"><strong class="subsection-number">#15</strong> Quote</h2>
+    </div>
+
+    <div class="code-sample">
+      <section class="styleguide__quote">
+        <div class="quote">
+          <div class="container">
+            <blockquote class="quote__content g-wide--push-1 g-wide--pull-1 g-medium--push-1">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Deleniti, illum, at quis vero nam minus incidunt consequatur reprehenderit aliquid blanditiis fugiat nihil dolor tempora distinctio ipsum quisquam debitis excepturi magni.
+            <p>Name / Details</p>
+            </blockquote>
+          </div>
+        </div>
+      </section>
+    </div>
+
+    <div class="container">
+      <a name="guides-intro"></a>
+      <h2 class="subsection-title"><strong class="subsection-number">#16</strong> Featured icons</h2>
+    </div>
+
+    <div class="code-sample">
+      <section class="styleguide__centered-list">
+        <div class="container">
+          <ul class="list-guides-intro list-centered list--reset clear">
+            <li class="g-medium--half g-wide--1 theme--multi-device-layouts  ">
+              <a href="#ignore-click" class="themed">
+                <span class="icon-circle--large themed--background"><i class="icon icon-multi-device-layouts"></i></span>
+                <h3 class="large text-divider">Multi-Device Layouts</h3>
+              </a>
+              <p>Create flexible, not fixed, layouts.</p>
+            </li>
+            <li class="g-medium--half g-wide--1 theme--introduction-to-media g-medium--last ">
+              <a href="#ignore-click" class="themed">
+                <span class="icon-circle--large themed--background"><i class="icon icon-introduction-to-media"></i></span>
+                <h3 class="large text-divider">Images, Audio and Video</h3>
+              </a>
+              <p>Only use media that loads fast and scales.</p>
+            </li>
+            <li class="g-medium--half g-wide--1 theme--user-input  ">
+              <a href="#ignore-click" class="themed">
+                <span class="icon-circle--large themed--background"><i class="icon icon-user-input"></i></span>
+                <h3 class="large text-divider">Forms and User Input</h3>
+              </a>
+              <p>Touch, tap, click, and submit.</p>
+            </li>
+            <li class="g-medium--half g-wide--1 theme--performance g-medium--last  g-wide--last ">
+              <a href="#ignore-click" class="themed">
+                <span class="icon-circle--large themed--background"><i class="icon icon-performance"></i></span>
+                <h3 class="large text-divider">Optimizing Performance</h3>
+              </a>
+              <p>Performance is a feature.</p>
+            </li>
+          </ul>
+        </div>
+      </section>
+    </div>
+
+    <div class="container">
+      <a name="featured-spotlight"></a>
+      <h2 class="subsection-title"><strong class="subsection-number">#17</strong> Featured spotlight</h2>
+    </div>
+
+    <a name="feature-spotlight"></a>
+    <div class="code-sample">
+      <section class="styleguide__feature-spotlight">
+        <div class="featured-spotlight">
+          <div class="container-medium">
+            <div class="featured-spotlight__container g--pull-half">
+              <div class="featured-spotlight__img">
+                <img src="images/icons/placeholder--wide.png" alt="wide image placeholder example">
+              </div>
+
+              <div class="container-small">
+                <h3 class="xxlarge">Featured spotlight</h3>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sed vitae varius augue, eu varius dolor.</p>
+                <a href="#ignore-click" class="cta--primary">View Google</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+
+    <div class="container">
+      <a name="featured-list"></a>
+      <h2 class="subsection-title"><strong class="subsection-number">#18</strong> Featured list</h2>
+    </div>
+
+    <div class="code-sample">
+      <section class="styleguide__featured-section">
+        <div class="featured-section">
+          <div class="container-medium">
+            <ul class="featured-list">
+              <li class="featured-list__item clear">
+                <div class="container-small">
+                  <div class="featured-list__content g--half">
+                    <h3>Case study</h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium, incidunt harum aut quae eaque sequi sunt molestiae tenetur vitae.</p>
+                    <a href="#ignore-click" class="cta--primary">View Google</a>
+                  </div>
+                  <div class="featured-list__img-wrapper g--half g--last">
+                    <div class="featured-list__img">
+                      <img src="images/icons/placeholder--small.png" alt="small image placeholder example">
+                    </div>
+                  </div>
+                </div>
+              </li>
+              <li class="featured-list__item clear">
+                <div class="container-small">
+                  <div class="featured-list__content g--half">
+                    <h3>Case study</h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium, incidunt harum aut quae eaque sequi sunt molestiae tenetur vitae.</p>
+                    <a href="#ignore-click" class="cta--primary">View Google</a>
+                  </div>
+                  <div class="featured-list__img-wrapper g--half g--last">
+                    <div class="featured-list__img">
+                      <img src="images/icons/placeholder--small.png" alt="small image placeholder example">
+                    </div>
+                  </div>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </section>
+    </div>
+
+    <div class="container">
+      <a name="next-lessons"></a>
+      <h2 class="subsection-title"><strong class="subsection-number">#19</strong> Featured block</h2>
+    </div>
+
+    <div class="code-sample">
+      <section class="styleguide__next-lessons">
+        <div class="next-lessons container-medium" data-current-lesson="03">
+          <h3><i class="icon icon-lessons"></i> Next Lessons</h3>
+          <ol class="list-lessons list-links">
+            <li><a href="#ignore-click">Lesson title one</a></li>
+            <li class="current"><a href="#ignore-click">Lesson title two <i class="icon icon-tick"></i></a></li>
+            <li><a href="#ignore-click">Lesson title three</a></li>
+            <li><a href="#ignore-click">Lesson title four</a></li>
+            <li><a href="#ignore-click">Lesson title five</a></li>
+          </ol>
+        </div>
+      </section>
+    </div>
+
+    <div class="container">
+      <a name="article-navigation"></a>
+      <h2 class="subsection-title"><strong class="subsection-number">#20</strong> Article navigation</h2>
+    </div>
+
+    <div class="code-sample">
+      <section class="styleguide__article-nav">
+        <div class="container-medium">
+          <nav class="article-nav">
+            <a href="#ignore-click" class="article-nav-link article-nav-link--prev">
+              <p class="article-nav-count">02</p>
+              <p>A need for responsive pages</p>
+            </a>
+            <a href="#ignore-click" class="article-nav-link article-nav-link--next">
+              <p class="article-nav-count">04</p>
+              <p>Create images for multiple resolutions</p>
+            </a>
+          </nav>
+        </div>
+      </section>
+    </div>
+
+    <footer id="gc-footer">
+      <div class="container">
+        <p><a href="#">Back to top</a></p>
+      </div>
+    </footer>
+
+    <script>
+      (function () {
+        'use strict';
+
+        var snippetToggle = document.querySelector('#snippet-toggle');
+        var snippets;
+
+        snippetToggle.addEventListener('click', function () {
+          if (snippets) {
+            for (var i = 0; i < snippets.length; i++) {
+              snippets[i].classList.toggle('auto-gen-code-visible');
+            }
+          }
+        });
+
+        window.onload = function () {
+          createCodeSamples();
+          snippets = document.querySelectorAll('.auto-gen-code-snippet');
+        };
+
+        function createCodeSamples() {
+          var codeWrappers = document.querySelectorAll('.code-sample');
+
+          for (var i = 0; i < codeWrappers.length; i++) {
+            var codeWrapper = codeWrappers[i];
+            var clonedNodes = getClonedNonTextNodes(codeWrapper);
+
+            beautifyNodes(clonedNodes);
+
+            var preElement = document.createElement('pre');
+            var codeElement = document.createElement('code');
+
+            for (var j = 0; j < clonedNodes.length; j++) {
+              codeElement.appendChild(document.createTextNode(clonedNodes[j].outerHTML));
+
+              if (j + 1 < clonedNodes.length) {
+                codeElement.appendChild(document.createTextNode('\n'));
+              }
+            }
+
+            preElement.appendChild(codeElement);
+            preElement.classList.add('auto-gen-code-snippet');
+            preElement.classList.add('container');
+
+            var clearDiv = document.createElement('div');
+            clearDiv.classList.add('clear');
+
+            var parent = codeWrapper.parentNode;
+
+            if (codeWrapper.nextSibling) {
+              parent.insertBefore(preElement, codeWrapper.nextSibling);
+            } else {
+              parent.appendChild(preElement);
+            }
+
+            parent.insertBefore(clearDiv, preElement);
+          }
+        }
+
+        function getClonedNonTextNodes(element) {
+          var nonTextNodes = [];
+          var childNodes = element.childNodes;
+
+          for (var i = 0; i < childNodes.length; i++) {
+            var childElement = childNodes[i];
+
+            if (childElement.nodeType !== 3) {
+              // Found a valid child element
+              nonTextNodes.push(childElement.cloneNode(true));
+            }
+          }
+
+          return nonTextNodes;
+        }
+
+        function beautifyNodes(elements) {
+          for (var i = 0; i < elements.length; i++) {
+            beautifyNode(elements[i], 0);
+          }
+        }
+
+        function beautifyNode(element, depth) {
+          var childNodes = element.childNodes;
+          var singleIndent = '    ';
+          var currentDepthSpacing = '';
+
+          for (var i = 0; i < depth; i++) {
+            currentDepthSpacing += singleIndent;
+          }
+
+          var nextDepthSpacing = currentDepthSpacing + singleIndent;
+
+          for (var j = 0; j < childNodes.length; j++) {
+            var childElement = childNodes[j];
+
+            if (childElement.nodeType === 3) {
+              // found a text node
+              if (childElement.nodeValue.indexOf('\n') >= 0) {
+                if (j + 1 < childNodes.length) {
+                  childElement.nodeValue = '\n' + nextDepthSpacing;
+                } else {
+                  childElement.nodeValue = '\n' + currentDepthSpacing;
+                }
+              }
+            } else {
+              beautifyNode(childElement, depth + 1);
+            }
+          }
+        }
+      })();
+    </script>
     <!-- build:js scripts/main.min.js -->
     <script src="scripts/main.js"></script>
     <!-- endbuild -->
@@ -109,6 +482,6 @@
       ga('create', 'UA-XXXXX-X', 'auto');
       ga('send', 'pageview');
     </script>
-    <!-- Built with love using Web Starter Kit -->
   </body>
 </html>
+
