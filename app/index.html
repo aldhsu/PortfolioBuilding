@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="description" content="A front-end template that helps you build fast, modern mobile web apps.">
+    <meta name="description" content="Allen Hsu Web Dev Portfolio">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Allen Hsu</title>
 
@@ -14,15 +14,13 @@
     <!-- Add to homescreen for Safari on iOS -->
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black">
-    <meta name="apple-mobile-web-app-title" content="Web Starter Kit">
+    <meta name="apple-mobile-web-app-title" content="Allen Hsu Portfolio">
     <link rel="apple-touch-icon-precomposed" href="apple-touch-icon-precomposed.png">
 
     <!-- Tile icon for Win8 (144x144 + tile color) -->
     <meta name="msapplication-TileImage" content="images/touch/ms-touch-icon-144x144-precomposed.png">
     <meta name="msapplication-TileColor" content="#3372DF">
     <script src="//cdnjs.cloudflare.com/ajax/libs/handlebars.js/2.0.0-alpha.4/handlebars.min.js"></script>
-    <script src="//cdnjs.cloudflare.com/ajax/libs/underscore.js/1.6.0/underscore-min.js" type="text/javascript" charset="utf-8"></script>
-    <script src="//cdnjs.cloudflare.com/ajax/libs/backbone.js/1.1.2/backbone-min.js"></script>
     <!-- SEO: If your mobile URL is different from the desktop URL, add a canonical link to the desktop page https://developers.google.com/webmasters/smartphone-sites/feature-phones -->
     <!--
     <link rel="canonical" href="http://www.example.com/">
@@ -35,7 +33,7 @@
     <header class="app-bar promote-layer">
       <div class="app-bar-container">
         <button class="menu"><img src="images/hamburger.svg" alt="Menu"></button>
-        <h1 class="logo">Allen Hsu:<strong> Programmer </strong></h1>
+        <h2 class="logo">Allen Hsu:<strong> Programmer </strong></h2>
         <section class="app-bar-actions">
         <!-- Put App Bar Buttons Here -->
         <!-- e.g <button><i class="icon icon-star"></i></button> -->
@@ -48,7 +46,7 @@
       <ul>
         <li><a href="#aboutme">About Me</a></li>
         <li><a href="#projects">Projects</a></li>
-        <li><a href="styleguide.html">Contact</a></li>
+        <li><a href="#contact">Contact</a></li>
       </ul>
     </nav>
 
@@ -109,7 +107,7 @@
                 </ol>
               </div>
             </li>
-            <li class="guides-list__item g--half theme--user-input g--last">
+            <li class="guides-list__item g--half theme--text g--last">
               <div class="primary-content">
                 <h3 class="xlarge"><a href="#ignore-click" class="themed">Experiments, Musings and WIP</a></h3>
                 <p><a href="http://www.codeskulptor.org/#user28_ksFWhendSQ_4.py">Tetris in Python</a></p>
@@ -139,6 +137,7 @@
               <p class="highlight-module__title">About Me</p>
               <p class="highlight-module__text"> Hi I'm <strong>Allen</strong>. I'm a web developer and aspiring Macgyver. I love exploring new technologies and building challenging projects. Currently available for work in Sydney, Australia. Let's chat!</p>
               <div class="social-links">
+                <!-- <a href="" name="contact">asdfsd</a> -->
                 <a href="http://au.linkedin.com/in/allendhsu" target="_blank">
                   <img src="images/linkedin.svg" alt="Linkedin">
                   <div>linkedin</div>
@@ -197,24 +196,6 @@
       })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
       ga('create', 'UA-XXXXX-X', 'auto');
       ga('send', 'pageview');
-    </script>
-    <script type="text/template">
-      <li class="guides-list__item g--half {{colorScheme}} ">
-        <div class="primary-content">
-          <h3 class="xlarge"><a href="#ignore-click" class="themed">Froodle</a></h3>
-          <p>{{firstTagline}}</p>
-          <a href={{url}}><img src={{image}}></a>
-          <p>{{secondTagline}}</p>
-        </div>
-        <div class="secondary-content">
-          <span class="icon-circle themed--background"><i class="icon icon-lessons"></i></span>
-          <ol class="list-links list-links--secondary">
-          {{#each blogPosts}}
-            <li><a href={{postTagline}}>{{postTagline}}</a></li>
-          {{/each}}
-          </ol>
-        </div>
-      </li>
     </script>
   </body>
 </html>
