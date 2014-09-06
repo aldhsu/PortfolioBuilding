@@ -23,6 +23,7 @@
 var gulp = require('gulp');
 var $ = require('gulp-load-plugins')();
 var del = require('del');
+var uglify = require("gulp-uglify");
 var runSequence = require('run-sequence');
 var browserSync = require('browser-sync');
 var pagespeed = require('psi');
@@ -39,7 +40,6 @@ var AUTOPREFIXER_BROWSERS = [
   'android >= 4.4',
   'bb >= 10'
 ];
-
 // Lint JavaScript
 gulp.task('jshint', function () {
   return gulp.src('app/scripts/**/*.js')
@@ -47,6 +47,12 @@ gulp.task('jshint', function () {
     .pipe($.jshint())
     .pipe($.jshint.reporter('jshint-stylish'))
     .pipe($.if(!browserSync.active, $.jshint.reporter('fail')));
+});
+// JS minify
+gulp.task('minify-js', function () {
+    gulp.src('app/scripts/**/*.js') // path to your files
+    .pipe(uglify())
+    .pipe(gulp.dest('dist/scripts'));
 });
 
 // Optimize Images

@@ -72,12 +72,12 @@
   }
 }
 
-/*==========  LEARNING  ==========*/
+/*==========  TEXT  ==========*/
 .highlight-module--text {
   color: #ffffff;
 
   &::after {
-    background-color: $colorText;
+    background-color: $colorRedA700;
   }
 
   a {

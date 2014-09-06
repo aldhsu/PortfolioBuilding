@@ -8,7 +8,7 @@
   var body = document.body;
   var appbarElement = querySelector('.app-bar');
   var menuBtn = querySelector('.menu');
-  var main = querySelector('.content');
+  var main = querySelector('.contents');
 
   function closeMenu() {
     body.classList.remove('open');
